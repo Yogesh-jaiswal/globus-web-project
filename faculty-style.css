@@ -1,0 +1,88 @@
+/* Faculty Section */
+.Faculty {
+  width: 90%;
+  margin: 40px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Faculty Heading */
+.Faculty h1 {
+  text-align: left; /* fixed: 'left-align' is invalid */
+  font-size: 2.5rem;
+  color: #3A2E22;
+  margin-bottom: 20px;
+}
+
+/* Slider Wrapper: only this part is flex */
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 500px;
+}
+
+/* Slide Card */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 16px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Active Slide */
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 3;
+  pointer-events: auto;
+}
+
+/* Slide Images */
+.slide img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.2);
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+  z-index: 5;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.arrow:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
