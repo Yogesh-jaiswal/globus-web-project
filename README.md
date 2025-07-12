@@ -52,7 +52,7 @@ This website project was collaboratively developed by:
 
 - **Yogesh Jaiswal**
 - **Ankit**
-- **Krishna**
+- **Krishnam kasera**
 
 ---
 
